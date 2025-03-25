@@ -27,3 +27,25 @@ def main():
 
 # Run the program
 main()
+
+def next_prime(num):
+    print("Step 5: Finding the next prime number...")
+    next_num = num + 1
+    while not is_prime(next_num):
+        next_num += 1
+    print(f"Step 6: The next prime number after {num} is {next_num}")
+    return next_num
+
+# Part 3: Print the final result
+def main():
+    number = get_input()
+    result = is_prime(number)
+    
+    if result:
+        print(f"Final Result: {number} is a prime number.")
+    else:
+        print(f"Final Result: {number} is NOT a prime number.")
+        next_prime(number)  # Call the new function
+
+# Run the program
+main()
