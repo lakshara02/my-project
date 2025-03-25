@@ -15,3 +15,15 @@ def is_prime(num):
     
     print(f"Step 4: {num} is not divisible by any number from 2 to {int(num ** 0.5)}, so it is prime.")
     return True
+
+def main():
+    number = get_input()
+    result = is_prime(number)
+    
+    if result:
+        print(f"Final Result: {number} is a prime number.")
+    else:
+        print(f"Final Result: {number} is NOT a prime number.")
+
+# Run the program
+main()
